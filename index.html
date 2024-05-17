@@ -340,40 +340,27 @@
                 <p class="font-medium text-md text-secondary md:text-lg">Please send us a message via email</p>
             </div>
         </div>
-        <form id="contact-form" action="https://formspree.io/f/xyyapayw" method="post">
+        <form onsubmit="sendToWhatsApp()">
         <div class="w-full lg:w-2/3 lg:mx-auto">
         <div class="w-full px-4 mb-8">
-          <label for="name" class=" text-base text-primary
+          <label for="fullName" class=" text-base text-primary
             font-bold">FullName</label>
-            <input type="text" name="fullName" id="fullName" class="w-full bg-slate-200
+            <input type="text" name="fullName"  class="w-full bg-slate-200
              text-dark p-3 rounded-md focus:outline-none
-             focus:ring-primary focus:ring-1 focus:border-primary" />
+             focus:ring-primary focus:ring-1 focus:border-primary" id="fullName" />
         </div>
-        <div class="w-full px-4 mb-8">
-          <label for="email" class=" text-base text-primary
-            font-bold">Email</label>
-            <input type="email" name="email" id="email" class="w-full bg-slate-200
-             text-dark p-3 rounded-md focus:outline-none
-             focus:ring-primary focus:ring-1 focus:border-primary" />
-        </div>
-        <div class="w-full px-4 mb-8">
-          <label for="subject" class=" text-base text-primary
-            font-bold">Subject</label>
-            <input type="subject" name="subject" id="subject" class="w-full bg-slate-200
-             text-dark p-3 rounded-md focus:outline-none
-             focus:ring-primary focus:ring-1 focus:border-primary" />
-        </div>
+       
         <div class="w-full px-4 mb-8">
           <label for="message" class=" text-base text-primary
             font-bold">Message</label>
-            <textarea type="text" name="message" id="message"   class="w-full bg-slate-200
+            <textarea type="text" name="message" class="w-full bg-slate-200
              text-dark p-3 rounded-md focus:outline-none
-             focus:ring-primary focus:ring-1 focus:border-primary h-32"></textarea>
+             focus:ring-primary focus:ring-1 focus:border-primary h-32" id="message"></textarea>
         </div>
         <div class="w-full">
-            <button class="text-base font-semibold text-white 
+            <button tipe="submit" class="text-base font-semibold text-white 
             bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 
-            hover:shadow-lg transition duration-500" type="submit" name="submit">Send</button>
+            hover:shadow-lg transition duration-500" >Send</button>
         </div>
     <!-- JUA_PMpJxuM9m5b -->
     </div>
@@ -390,8 +377,8 @@
                 <h2 class="font-bold text-4xl text-white mb-5">ADiT-TeCH</h2>
                 <h3 class="font-bold text-2xl mb-2">Contact Us</h3>
                 <p>arihades.123@gmail.com</p>
-                <p>Kab.Bulungan</p>
-                <p>Kalimantan Utara - Indonesia</p>
+                <p>Kab.Luwu</p>
+                <p>Sulawesi Selatan - Indonesia</p>
             </div>
             <div class="w-full px-4 mb-12 md:w-1/3">
                 <h3 class="font-semibold text-xl text-white mb-5">Blogging Category</h3>
@@ -510,5 +497,12 @@
 </a>
 <!-- Back to top End -->
 <script src="dist/js/script.js"></script>
+<script>
+    function sendToWhatsApp(){
+        const urlToWhatsApp = `https://wa.me/6281241539225?text=Halo,Nama Saya ${fullName.value}, ${id=message.value}`;
+
+        window.open(urlToWhatsApp,"_blank");
+    }
+</script>
 </body>
 </html>

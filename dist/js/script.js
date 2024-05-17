@@ -49,25 +49,25 @@ if(darkToggle.checked){
 });
 
 
-const contactForm = document.getElementById("contact-form");
+// const contactForm = document.getElementById("contact-form");
 
-contactForm = addEventListener("submit", function(e){
-e.preventDefault();
+// contactForm = addEventListener("submit", function(e){
+// e.preventDefault();
 
-const url = e.target.action;
+// const url = e.target.action;
 
-const formData = new FormData(contactForm);
+// const formData = new FormData(contactForm);
 
-fetch(url,{
-    method: "POST",
-    body: formData,
-    mode:"no-cors",
-}).then(()=>{
-    // url tank you
-    window.location.href= "thankyou.html";
-}).catch((e)=> alert('Error Occured'));
+// fetch(url,{
+//     method: "POST",
+//     body: formData,
+//     mode:"no-cors",
+// }).then(()=>{
+//     // url tank you
+//     window.location.href= "thankyou.html";
+// }).catch((e)=> alert('Error Occured'));
 
-});
+// });
 
 
 
